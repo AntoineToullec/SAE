@@ -1,0 +1,137 @@
+
+    <style>
+        body{
+            background-color: #1f1f1f;
+            color: white;
+        }
+        #infos{
+            color: #888888;
+            font-size: small;
+        }
+        .center{
+            text-align: center;
+        }
+
+        h3 {
+            text-decoration: underline;
+        }
+        h2{
+            color : rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+        h1{
+            color : rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+        a{
+            color : rgb(116, 192, 255);
+        }
+        section,header,footer,.title,.other{
+            background-color: rgb(49, 49, 49);
+            border-radius: 0 20px ;
+            padding: 0 40px;
+        }
+
+        section > hr{
+            height: 1px;
+            background-color: black;
+        }
+        code {
+            background-color: #eee;
+            border-radius: 3px;
+            padding: 0 3px;
+            color: #1f1f1f;
+        }
+        span {
+            border-radius: 3px;
+            padding: 0 3px;
+            color: orange;
+        }
+        table {
+        border-collapse: collapse;
+        width: 40%;
+        }
+
+        th, td {
+            border: 2px solid rgb(255, 255, 255);
+            padding: 8px;
+        }
+    </style>
+    Version : 2.7.4 | Client : Les Génies du Ponant | Produit : Machine à courber les bananes | Date : 07/02/2024
+<section><h1 class="center">COMPILER ET LANCER UN PROGRAMME DEPUIS LE TERMINAL LINUX</h1>
+<p></p>
+<p>Bonjour à toi jeune informaticien, ce tuto consiste à te montrer comment</p>
+<ul><li>Compiler</li></ul>
+<ul><li>Exécuter</li></ul>
+<ul><li>Utiliser un programme codé en C</li></ul>
+<p></p>
+<p><em>Et tout cela depuis un terminal Linux.</em></p>
+<p></p>
+<p><strong>Vous devez tout de même avoir installé le compilateur <span>GCC</span> au préalable.</strong></p>
+<p></p>
+</section><section><h2>Trouver le programme</h2>
+<p></p>
+<p><em>La première étape consiste  à <strong>aller chercher votre programme</strong>. Pour cela, vous devez vous placer à l'endroit où se trouve votre programme.</em></p>
+<p></p>
+<h3>Etape 1</h3>
+<h4>Ouvrir le terminal :</h4>
+<p>Appuyez sur la touche Windows et saisissez <span>terminal</span> et ouvrez le.</p>
+<h3>Etape 2</h3>
+<h4>Se déplacer jusqu'à son fichier :</h4>
+<p>À l'aide de la commande <span>cd</span> déplacez vous jusqu'au dossier où se trouve votre code en C.</p>
+<p></p>
+</section><section><h2>Compiler le programme</h2>
+<p></p>
+<p><em>Vous devez maintenant compiler votre programme afin de pouvoir l'exécuter par la suite.</em></p>
+<p></p>
+<h3>Etape 1</h3>
+<h4>Trouver le nom de votre programme</h4>
+<p><em>Pour compiler votre programme, il vous faut le nom de votre programme </em>CQFD<em>.</em></p>
+<p></p>
+<p>Pour cela, si vous ne connaissez pas le nom de votre programme, vous pouvez utiliser la commande <span>ls</span> afin de lister les fichiers du répertoire.</p>
+<p></p>
+<p>Pour notre exemple, nous utiliserons un ficher nommé <span>exemple.c</span>.</p>
+<p></p>
+<h3>Etape 2</h3>
+<h4>Compiler le programme</h4>
+<p></p>
+<p>Pour compiler le programme, il vous suffit de rentrer cette commande.</p>
+<p>```</p>
+<p>cc programme.c -o programme -Wall</p>
+<p>```</p>
+<p>Plusieurs cas apparaissent alors.</p>
+<p></p>
+<p>|Cas 1        |Cas 2                |Cas 3          |</p>
+<p>|-------------|---------------------|---------------|</p>
+<p>|Aucune erreur|Erreurs dans le code |Autres erreurs |</p>
+<p>|C'est parfait| Modifiez le programme et rééssayez | Courage...  |</p>
+<p></p>
+<h3>Etape 3</h3>
+<h4>Exécuter et utiliser le programme</h4>
+<p>Une fois que votre programme est bien compilé <strong>sans erreurs donc</strong> il ne reste plus qu'à l'utiliser, <em>enfin...</em></p>
+<p></p>
+<p>Pour cela, toujours dans le terminal, utilisez la commande suivante</p>
+<p>```</p>
+<p>./programme</p>
+<p>```</p>
+<p></p>
+<p><strong>Il ne faut pas inclure l'extension dans la requête, c'est-à-dire le <span>.c</span>.</strong></p>
+<p></p>
+<p>Votre programme devrait donc pouvoir être utilisé sans problème <span>:)</span>.</p>
+<p></p>
+<p><em>A condition évidemment que vous soyez un programmeur digne de ce nom...</em></p>
+<p></p>
+</section><section><h2>Le petit plus</h2>
+<p></p>
+<p>Si toutefois tu ne comprends rien à ce que je viens de dire, je te mets à disposition une petite vidéo qui illustre bien ce que je viens d'expliquer !!</p>
+<p></p>
+<a href="https://www.youtube.com/watch?v=M04I-RPhYwQ">Voir la vidéo</a>
+<p></p>
+<p><strong>@copyright</strong> <em>FAVER Sasha - GOURLAOUEN Cyril - TOULLEC Antoine - BROSSARD Lilian</em></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</section>

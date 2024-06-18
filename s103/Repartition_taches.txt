@@ -1,0 +1,9 @@
+Repartition des tâches SAE 1.03 partie 2 : 
+
+Sasha Faver: 25% (Création du script sae103.bash)
+
+Cyril Gourlaouen: 25% (Création du script gendoc-user.php)
+
+Lilian Brossar: 25% (Création du script gendoc-tech.php)
+
+Antoine Toullec: 25% (Automatisation des versions et de la bande d'infos)

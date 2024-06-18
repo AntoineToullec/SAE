@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="fr"><head><title>documentation technique </title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><header><p class="center" >Version: 2.7.4 | Client: Les Génies du Ponant | Produit: Machine à courber les bananes | Date: 07/02/2024</p><hr></header><main><hr><div class="title"><h1 class="center">Documentation Technique</h1><p class="center">du programme :</p><h2 class="center">src1</h2></div><hr><section class="main_prog"><h2>Programme src1:</h2><p>
+ <br> Ce programme en langage C implémente le jeu classique du Tic-Tac-Toe (Morpion).
+ <br> Il utilise une grille 3x3 pour représenter le plateau de jeu.
+ <br> Deux joueurs, symbolisés par "X" et "O", alternent pour effectuer leurs mouvements.
+ <br> Le programme vérifie constamment s'il y a un gagnant ou un match nul à chaque tour.
+ <br> La partie se termine dès qu'un joueur remporte la partie ou si un match nul est atteint.
+ <br> Des commentaires détaillés sont ajoutés pour faciliter la compréhension du code source.
+<br></p></section><hr><hr><section> <h2 > defines : </h2> <article><h3>define WIN 1 </h3> <p class='indent'> Les victoires sont égales à 1 </p><br><br></article><hr> <article><h3>define LOST 0 </h3> <p class='indent'> Les pertes sont égales à 0 </p><br><br></article><hr></section><hr><hr><section> <h2 > variables globales : </h2> <article><h3>int nbvictoire; </h3> <p class='indent'>Nombre total des victoires</p><br><br></article><hr> <article><h3>int nbnul; </h3> <p class='indent'> Nombre total des match nul</p><br><br></article><hr>    </section><hr><hr><section><h2 > structures : </h2><article><h3> Joueur</h3><br><h4>  Structure victoire d'un symbole </h4><p class='indent'> 
+    char symbole;     Symbole du joueur ('X' ou 'O') <br>
+    int victoires;     Nombre de victoires du joueur <br>
+</p></article><hr><article><h3> InfosJoueurs</h3><br><h4>  Structure d'un joueur </h4><p class='indent'> 
+    Joueur joueur1;   Joueur 1 <br>
+    Joueur joueur2;   Joueur 2 <br>
+</p></article><hr></section><hr><hr><section><h2 > fonctions : </h2><article><h3> fonction : afficherPlateau</h3>
+ <br> void afficherPlateau(char plateau[3][3])
+ <br> 
+ <br> <h4> Procédure qui affiche le plateau.</h4><p class='indent'> <br> 
+ <br> <strong>plateau[3][3]</strong>: La grille à afficher.
+ <br></p></article><hr><article><h3> fonction : verifierVictoire</h3>
+ <br> int verifierVictoire(char plateau[3][3], char joueur)
+ <br> 
+ <br> <h4> Fonction qui vérifie s'il y a un gagnant.</h4><p class='indent'> <br> 
+ <br> <strong>plateau[3][3]</strong>: La grille à vérifier. 
+ <br> 
+ <br> <strong>joueur</strong>: Vérifie si le joueur a gagné. 
+ <br> 
+ <br> return 0 si le joueur n'est pas gagnant, 1 si le joueur est gagnant.
+ <br></p></article><hr></section><hr><hr><hr><div class="title"><h1 class="center">Documentation Technique</h1><p class="center">du programme :</p><h2 class="center">src2</h2></div><hr><section class="main_prog"><h2>Programme src2:</h2><p>
+ <br> Ce fichier source contient un jeu de PUISSANCE 4 complet.
+ <br> Jouable uniquement dans le terminal LINUX.
+ <br> Le jeu consiste à aligner 4 jetons d'une même forme.
+ <br> Le jeu se joue dans une grille de 7 * 6.
+ <br> Le joueur1 pose un jeton puis le joueur2 et ainsi de suite jusqu'à que soit:
+ <br> - La grille soit pleine et il sera donc impossible de continuer la partie, et elle sera considérée comme "égalité".
+ <br> - Un joueur aligne 4 jetons de sa forme.
+ <br>
+ <br> Bon jeu à vous !
+ <br></p></section><hr><hr><section> <h2 > defines : </h2> <article><h3>define LIGNES 6   </h3> <p class='indent'> Nombre de lignes présentes dans une grille de puissance 4</p><br><br></article><hr> <article><h3>define COLONNES 7 </h3> <p class='indent'> Nombre de colonnes présentes dans une grille de puissance 4</p><br><br></article><hr></section><hr><hr><section> <h2 > variables globales : </h2> <article><h3>int victoire1; </h3> <p class='indent'> Nombre de victoire du joueur 1</p><br><br></article><hr> <article><h3>int victoire2; </h3> <p class='indent'> Nombre de victoire du joueur 2</p><br><br></article><hr> <article><h3>int egalite;   </h3> <p class='indent'> Nombre de partie se finissant avec une égalité</p><br><br></article><hr> <article><h3>int partie;    </h3> <p class='indent'> Nombre de partie jouée au total </p><br><br></article><hr>     </section><hr><hr><section><h2 > structures : </h2><article><h3> str_joueur</h3><br><h4>        Structure d'un joueur</h4><p class='indent'>
+
+    char nom[20];    Le nom du joueur<br>
+    int id;         Le numéro du joueur qui permet de l'identifier<br>
+    char couleur;    La couleur des jetons du joueur<br>
+    int nbvictoire;  Le nombre de victoire du joueur<br>
+</p></article><hr><article><h3> str_stats</h3><br><h4>          Statistique d'un jeu</h4><p class='indent'>
+
+    int nbjetons;     Le nombre de jetons qui ont été posé depuis le début<br>
+    int nbcoller;     Le nombre de jetons maximum qui se colle <br>
+    float moyerreur;  La moyenne du nombres d'erreurs rencontré par le programme. <br>
+</p></article><hr></section><hr><hr><section><h2 > fonctions : </h2><article><h3> fonction : afficherPlateau</h3>
+ <br> <h4> Permet d'afficher la grille actuelle.</h4><p class='indent'> <br>  Cette fonction est composé de 4 boucles FOR,
+ <br> il permet d'afficer la présence ou non d'un jeton mais aussi de dessiner le plateau à chaque tour.
+ <br>
+ <br> <strong>char</strong>plateau[LIGNES][COLONNES], c'est le tableau avec lequel les jetons se placent.
+ <br></p></article><hr><article><h3> fonction : placerJeton</h3>
+ <br> <h4> Place le jeton dans le plateau.</h4><p class='indent'> <br>  Cet fonction permet de savoir si on peut placer le jeton et aussi le met dans le plateau en fonction du plateau.
+ <br>
+ <br> return int, Numéro de la ligne
+ <br> <strong>char</strong>plateau[LIGNES][COLONNES], c'est le tableau avec lequel les jetons se placent.
+ <br> <strong>int</strong>colonne, numéro de la colonne choisi par le joueur
+ <br> <strong>char</strong>joueur, c'est le nom du joueur.
+ <br></p></article><hr><article><h3> fonction : verifierVictoire</h3>
+ <br> <h4> Vérifie si une victoire est possible avec le nouveau jeton.</h4><p class='indent'> <br>  Cet fonction a 4 étapes:
+ <br> - Vérification horizontale
+ <br> - Vérification verticale
+ <br> - Vérification diagonale vers la droite
+ <br> - Vérification diagonale vers la gauche
+ <br>
+ <br> return int, si le résultat est égal à 1 alors c'est qu'il y a une victoire, sinon 0.
+ <br> <strong>char</strong>plateau[LIGNES][COLONNES], c'est le tableau avec lequel les jetons se placent.
+ <br> <strong>int</strong>colonne, numéro de la colonne choisi par le joueur
+ <br> <strong>int</strong>ligne, numéro de la colonne renvoyé par la fonction placeJeton.
+ <br> <strong>char</strong>joueur, nom du joueur.
+ <br></p></article><hr></section><hr><hr><hr><div class="title"><h1 class="center">Documentation Technique</h1><p class="center">du programme :</p><h2 class="center">src3</h2></div><hr><section class="main_prog"><h2>Programme src3:</h2><p>
+<br> Ce programme propose de jouer a une partie de sudoku
+<br> Qui peut utiliser des grille externe
+<br> Un sudoku ou il faut remplir les case
+<br> pour remplir les regles sont de 1 chiffre unique par ligne, par colonne, et par case
+<br></p></section><hr><hr><section> <h2 > defines : </h2> <article><h3>define N 3</h3> <p class='indent'>la hauteur et largeur de la grille des grande case</p><br><br></article><hr> <article><h3>define VICTOIRE 405</h3> <p class='indent'> la valeur de toutes les valeur du tableau fini</p><br><br></article><hr></section><hr><hr><section> <h2 > variables globales : </h2> <article><h3>int points; </h3> <p class='indent'> nombre de points accumuler par l'utilisateur en fonction de son temps et de ses action</p><br><br></article><hr> <article><h3>int temps; </h3> <p class='indent'> temps en seconde pris par l'utilisateur</p><br><br></article><hr> <article><h3>int record; </h3> <p class='indent'> Lettre indiquant son groupe TD </p><br><br></article><hr> <article><h3>int niveauAtteint; </h3> <p class='indent'> niveau maximal atteint sur la session de jeu </p><br><br></article><hr> <article><h3>int nombreVictoire; </h3> <p class='indent'> nombre de victoire d'affiler sur la session de jeu </p><br><br></article><hr>    <article><h3>char pseudo[49]; </h3> <p class='indent'> pseudo du joueur </p><br><br></article><hr></section><hr><hr><section><h2 > structures : </h2><article><h3> str_joueur</h3><br><h4>  structure pour garder le pseudo et le record du joueur </h4><p class='indent'> 
+char pseudo[49];  pseudo du joueur <br>
+int record;  Lettre indiquant son groupe TD <br>
+</p></article><hr><article><h3> stat</h3><br><h4>  enregistre les stats de la session en cours </h4><p class='indent'> 
+int niveauAtteint;  niveau maximal atteint sur la session de jeu <br>
+int nombreVictoire;  nombre de victoire d'affiler sur la session de jeu <br>
+</p></article><hr></section><hr><hr><section><h2 > fonctions : </h2><article><h3> fonction : afficherGrille</h3>
+<br> <h4> Affiche la grille de jeu.</h4><p class='indent'><br> affiche en fonction de N et TAILLE la grille mise en form avec les constante d'affichage
+<br>
+<br> <strong>grille</strong>: La grille à afficher.
+<br></p></article><hr><article><h3> fonction : saisir</h3>
+<br> <h4> recupere une valeur donner par l'utilisateur.</h4><p class='indent'><br> recupere une valeure entre 1 et 9 donner par 'utilisateur, si la valeur n'est pas correct alors une autre demande est faite.
+<br>
+<br> <strong>val_inser</strong>: valeur qui contient la saisie de l'utilisateur.
+<br></p></article><hr><article><h3> fonction : chargerGrille</h3>
+<br> <h4> Charge une grille depuis un fichier existant.</h4><p class='indent'><br> charge la grille d'apres le fichier choisie par l'utilisateur, si le fichier est inexistant il stop le programme en affichant une erreur
+<br>
+<br> <strong>grille</strong>: La grille de jeu.
+<br> <strong>erreurFichier</strong>: entier de 1 ou 0 qui sert a signal.
+<br></p></article><hr><article><h3> fonction : possible</h3>
+<br> <h4> Vérifie si une valeur peut être placée a l'emplacement de la grille.</h4><p class='indent'><br> vérifie si dans la colonne et la ligne, et la sous case n'on pas de doublons de la valeur qui veut etre inserer
+<br> 
+<br> return 1 si la valeur ne peut pas être placée, 0 sinon.
+<br> <strong>grille,</strong>La grille de jeu.
+<br> <strong>ligne</strong>La ligne de la case choisie.
+<br> <strong>colonne</strong>La colonne de la case choisie.
+<br> <strong>valeur</strong>La valeur à inserer dans la grille.
+<br></p></article><hr><article><h3> fonction : victoire</h3>
+<br> <br> <h4> Vérifie si la partie est gagnée.</h4><p class='indent'><br> calcul la somme de tous le tableau et verifie si il a atteint le palier de VICTOIRE
+<br> 
+<br> return 1 si la partie est gagnée, 0 sinon.
+<br> <strong>grille</strong>La grille de jeu.
+<br></p></article><hr></section><hr><hr></main></body><style>body{background-color: #1f1f1f;color: white;}#infos{color: #888888;font-size: small;}.center{text-align: center;}.indent{padding-left: 5em;}h2{color : rgb(103, 214, 248);text-decoration: underline;}h1{color : #9900FF;}a{color : rgb(255, 255, 255)}section,.title{background-color: rgb(49, 49, 49);border-radius: 0 20px ;padding: 0 40px;}hr{border-radius: 2px;height: 2px;background-color: rgb(88, 88, 88);}section > hr{height: 1px;background-color: black;}</style></html>
